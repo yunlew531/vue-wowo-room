@@ -2,7 +2,7 @@
   <section id="product-about" class="ml-20 mb-24 lg:mb-48">
     <div class="product-about grid grid-cols-12 grid-rows-12 gap-4 px-5 xl:px-0">
       <div class="div col-start-1  xl:col-start-3 row-span-8 flex justify-end pr-6 xl:pr-12">
-        <img src="src/assets/images/caption_aboutJeanasis.png" class="side-decoration" alt="">
+        <img src="/src/assets/images/caption_aboutJeanasis.png" class="side-decoration" alt="">
       </div>
       <h2 class="text-4xl row-span-1 font-bold col-start-2 col-end-13 lg:text-6xl lg:col-end-9 xl:col-start-4 z-10 leading-tight mt-3">無甲醛、無毒、環保、品質、天然原木、溫潤質感。</h2>
       <p class="leading-normal mb-12 text-2xl col-start-2 col-end-8  hidden lg:block lg:row-start-6 xl:col-start-4">

@@ -2,7 +2,7 @@
   <section id="latest-panel" class="mb-24 lg:mb-48">
     <div class=" flex justify-center mr-20">
       <div class=" mr-12">
-        <img src="src/assets/images/latestTitle.webp" alt="">
+        <img src="/src/assets/images/latestTitle.webp" alt="">
         <div class="latest-decoration-ani text-center mt-5 text-xl">
           <p class=" mb-1"><i class="fas fa-caret-down"></i></p>
           <p class=" mb-1"><i class="fas fa-caret-down"></i></p>

@@ -151,7 +151,7 @@ body {
 }
 
 .swiper-wrapper .img-1 {
-  background: url("/@/assets/images/photo-1547104443-442a7698bac4-2@2x.png") no-repeat center center;
+  background: url("/src/assets/images/photo-1547104443-442a7698bac4-2@2x.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -160,37 +160,37 @@ body {
 }
 
 .swiper-wrapper .img-2 {
-  background: url("/@/assets/images/photo-1549388604-817d15aa0110-3@2x.png") no-repeat center center;
+  background: url("/src/assets/images/photo-1549388604-817d15aa0110-3@2x.png") no-repeat center center;
   background-size: cover;
 }
 
 .swiper-wrapper .img-3 {
-  background: url("/@/assets/images/photo-1552558636-f6a8f071c2b3-2@2x.png") no-repeat center center;
+  background: url("/src/assets/images/photo-1552558636-f6a8f071c2b3-2@2x.png") no-repeat center center;
   background-size: cover;
 }
 
 .swiper-wrapper .img-4 {
-  background: url("/@/assets/images/photo-1565620731358-e8c038abc8d1-2@2x.png") no-repeat center center;
+  background: url("/src/assets/images/photo-1565620731358-e8c038abc8d1-2@2x.png") no-repeat center center;
   background-size: cover;
 }
 
 .swiper-wrapper .img-5 {
-  background: url("/@/assets/images/photo-1576354302919-96748cb8299e-1@2x.png") no-repeat center center;
+  background: url("/src/assets/images/photo-1576354302919-96748cb8299e-1@2x.png") no-repeat center center;
   background-size: cover;
 }
 
 .swiper-wrapper .img-6 {
-  background: url("/@/assets/images/photo-1583250543752-11da1d6ebbe0@2x.png") no-repeat center center;
+  background: url("/src/assets/images/photo-1583250543752-11da1d6ebbe0@2x.png") no-repeat center center;
   background-size: cover;
 }
 
 .swiper-wrapper .img-7 {
-  background: url("/@/assets/images/photo-1599243075095-7199cae2c164-2@2x.png") no-repeat center center;
+  background: url("/src/assets/images/photo-1599243075095-7199cae2c164-2@2x.png") no-repeat center center;
   background-size: cover;
 }
 
 .swiper-wrapper .img-8 {
-  background: url("/@/assets/images/photo-1600607687126-8a3414349a51-1@2x.png") no-repeat center center;
+  background: url("/src/assets/images/photo-1600607687126-8a3414349a51-1@2x.png") no-repeat center center;
   background-size: cover;
 }
 

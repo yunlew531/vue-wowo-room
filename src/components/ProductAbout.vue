@@ -29,7 +29,7 @@ export default {
 .product-about-bg {
   background: center;
   background-size: cover;
-  background-image: url('/@/assets/images/photo-1579622574793-a7c8148891fe.jfif');
+  background-image: url('/src/assets/images/photo-1579622574793-a7c8148891fe.jfif');
 }
 
 .side-decoration {

@@ -33,17 +33,17 @@ export default {
       {
         time: '',
         title: 'ETHICAL PRODUCTS',
-        url: '/src/assets/images/photo-1576354302919-96748cb8299e-1@2x.png'
+        url: './assets/images/photo-1576354302919-96748cb8299e-1@2x.png'
       },
       {
         time: '',
         title: 'el 2021 SUMMER',
-        url: '/src/assets/images/photo-1599243075095-7199cae2c164-2@2x.png'
+        url: './assets/images/photo-1599243075095-7199cae2c164-2@2x.png'
       },
       {
         time: '',
         title: 'SUMMER #1',
-        url: '/src/assets/images/photo-1565620731358-e8c038abc8d1-2@2x.png'
+        url: './assets/images/photo-1565620731358-e8c038abc8d1-2@2x.png'
       }
     ]);
 

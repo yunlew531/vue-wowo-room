@@ -13,8 +13,8 @@
         <p class=" mb-1">{{ item.time }}</p>
         <div class="w-72 h-60 mb-1 relative overflow-hidden">
           <div class="duration-500 ease-in opacity-0 bg-black group-hover:opacity-50 w-full h-full absolute z-10"></div>
-          <div
-            :style="{ 'background-image': 'url('+ item.url +')' }"
+            <!-- :style="{ 'background-image': 'url('+ item.url +')' }" -->
+          <div :class="item.img"
             class="duration-5000 ease-in bg-no-repeat bg-center bg-cover w-full h-full absolute transform  group-hover:rotate-6 group-hover:scale-110"></div>
           </div>
         <h3 class=" text-xl mb-2">{{ item.title }}</h3>
@@ -33,17 +33,20 @@ export default {
       {
         time: '',
         title: 'ETHICAL PRODUCTS',
-        url: '/src/assets/images/photo-1576354302919-96748cb8299e-1@2x.png'
+        url: '/src/assets/images/photo-1576354302919-96748cb8299e-1@2x.png',
+        img: 'img-1'
       },
       {
         time: '',
         title: 'el 2021 SUMMER',
-        url: '/src/assets/images/photo-1599243075095-7199cae2c164-2@2x.png'
+        url: '/src/assets/images/photo-1599243075095-7199cae2c164-2@2x.png',
+        img: 'img-2'
       },
       {
         time: '',
         title: 'SUMMER #1',
-        url: '/src/assets/images/photo-1565620731358-e8c038abc8d1-2@2x.png'
+        url: '/src/assets/images/photo-1565620731358-e8c038abc8d1-2@2x.png',
+        img: 'img-3'
       }
     ]);
 
@@ -74,5 +77,14 @@ export default {
 <style>
 .duration-5000 {
   transition-duration: 5s;
+}
+.img-1 {
+  background-image: url('/src/assets/images/photo-1576354302919-96748cb8299e-1@2x.png');
+}
+.img-2 {
+  background-image: url('/src/assets/images/photo-1599243075095-7199cae2c164-2@2x.png');
+}
+.img-3 {
+  background-image: url('/src/assets/images/photo-1565620731358-e8c038abc8d1-2@2x.png');
 }
 </style>

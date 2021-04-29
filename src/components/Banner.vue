@@ -1,6 +1,6 @@
 <template>
   <section id="banner" class="mb-24 lg:mb-48">
-    <div class="swiper-pagination transform flex flex-col opacity-0 lg:opacity-100"></div>
+    <div class="swiper-pagination transform flex flex-col opacity-0 lg:opacity-100 mb-16"></div>
     <div class="swiper-container lg:ml-24 relative">
       <div class="swiper-wrapper">
         <div class="swiper-slide img-1"></div>

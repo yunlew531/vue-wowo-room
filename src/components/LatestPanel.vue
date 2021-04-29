@@ -15,7 +15,7 @@
           <div class="duration-500 ease-in opacity-0 bg-black group-hover:opacity-50 w-full h-full absolute z-10"></div>
             <!-- :style="{ 'background-image': 'url('+ item.url +')' }" -->
           <div :class="item.img"
-            class="duration-5000 ease-in bg-no-repeat bg-center bg-cover w-full h-full absolute transform  group-hover:rotate-6 group-hover:scale-110"></div>
+            class="duration-3000 ease-in bg-no-repeat bg-center bg-cover w-full h-full absolute transform  group-hover:rotate-6 group-hover:scale-110"></div>
           </div>
         <h3 class=" text-xl mb-2">{{ item.title }}</h3>
         <h4 class="ease-in duration-500 group-hover:ml-3 text-sm">READ<i class="fas fa-long-arrow-alt-right ml-2"></i></h4>
@@ -75,8 +75,8 @@ export default {
 </script>
 
 <style>
-.duration-5000 {
-  transition-duration: 5s;
+.duration-3000 {
+  transition-duration: 3s;
 }
 .img-1 {
   background-image: url('/src/assets/images/photo-1576354302919-96748cb8299e-1@2x.png');

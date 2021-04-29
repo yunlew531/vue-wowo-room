@@ -1,7 +1,7 @@
 <template>
   <header id="header">
-    <div class=" ml-10 my-8 lg:mx-12 lg:my-12 flex justify-between text-gray-800">
-      <h1 class=" text-2xl font-bold">
+    <div class=" ml-10 my-8 lg:mx-12 lg:my-10 flex justify-between text-gray-800">
+      <h1 class=" text-3xl font-bold">
         <a href="#">WOWOROOM</a>
       </h1>
       <ul class=" inline-flex max-w-xl text-base">

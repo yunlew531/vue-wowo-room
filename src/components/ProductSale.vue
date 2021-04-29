@@ -4,8 +4,7 @@
       <img src="/src/assets/images/caption_storeinfo.png" class=" absolute left-96 h-612 -top-40">
       <a href="#" class="relative group w-96 mt-20 h-650">
         <div class=" overflow-hidden">
-          <div class=" duration-3000 ease-in product-1 relative transform group-hover:rotate-6 group-hover:scale-110"
-            style="background-image: url('/src/assets/images/photo-1511401139252-f158d3209c17.jfif')">
+          <div class=" duration-3000 ease-in product-1 relative transform group-hover:rotate-6 group-hover:scale-110">
             <div class=" duration-300 ease-in filter blur-sm absolute h-full w-full bg-black opacity-0 group-hover:opacity-50"></div>
           </div>
         </div>
@@ -20,8 +19,7 @@
       </a>
       <a href="#" class=" group w-80 mt-20 ml-32">
         <div class=" overflow-hidden">
-          <div class="duration-3000 ease-in product-2 relative transform group-hover:rotate-6 group-hover:scale-110 "
-            style="background-image: url('/src/assets/images/photo-1611967164521-abae8fba4668.jfif')">
+          <div class="duration-3000 ease-in product-2 relative transform group-hover:rotate-6 group-hover:scale-110">
             <div class=" duration-300 ease-in filter blur-sm absolute h-full w-full bg-black opacity-0 group-hover:opacity-50"></div>
           </div>
           <div class=" duration-500 ease-out absolute -top-5 bg-white z-10 group-hover:mt-12">
@@ -57,11 +55,13 @@ export default {
   height: 515px;
   background-size: cover;
   background-position: center;
+  background-image: url("/src/assets/images/photo-1511401139252-f158d3209c17.jfif");
 }
 .product-2 {
   height: 445px;
   background-size: cover;
   background-position: center;
+  background-image: url("/src/assets/images/photo-1611967164521-abae8fba4668.jfif");
 }
 .h-612 {
   height: 612px;

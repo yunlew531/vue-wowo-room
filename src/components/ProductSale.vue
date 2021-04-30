@@ -8,7 +8,7 @@
             <div class=" duration-300 ease-in filter blur-sm absolute h-full w-full bg-black opacity-0 group-hover:opacity-50"></div>
           </div>
         </div>
-        <div class=" duration-500 ease-out absolute ml-16 pt-4 pl-8 -bottom-8 bg-white z-10 group-hover:mb-20">
+        <div class=" duration-500 ease-out absolute ml-16 pt-7 pb-10 pl-8 -bottom-18 bg-white z-10 group-hover:mb-20">
           <h3 class=" text-5xl">NEWSOFA(WOWOROOM)</h3>
           <h4 class=" text-lg mb-5 italic">NOW ON SALE<i class="fas fa-long-arrow-alt-right ml-2"></i></h4>
           <h5 class=" duration-500 opacity-0 group-hover:opacity-100">
@@ -22,7 +22,7 @@
           <div class="duration-3000 ease-in product-2 relative transform group-hover:rotate-6 group-hover:scale-110">
             <div class=" duration-300 ease-in filter blur-sm absolute h-full w-full bg-black opacity-0 group-hover:opacity-50"></div>
           </div>
-          <div class=" duration-500 ease-out absolute -top-5 bg-white z-10 group-hover:mt-12">
+          <div class=" duration-500 ease-out absolute -top-4 bg-white z-10 group-hover:mt-12">
             <h3 class=" text-5xl">ONLINE STORE</h3>
             <h4 class=" text-lg mb-5 italic">ST.WOWOROOM<i class="fas fa-long-arrow-alt-right ml-2"></i></h4>
           </div>
@@ -74,5 +74,8 @@ export default {
 }
 .mb-112 {
   margin-bottom: 550px;
+}
+.-bottom-18{
+  bottom: -70px;
 }
 </style>

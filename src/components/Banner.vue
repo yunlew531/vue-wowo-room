@@ -12,7 +12,7 @@
         <div class="swiper-slide img-7"></div>
         <div class="swiper-slide img-8"></div>
       </div>
-      <div class="clip-triangle absolute w-full xl:w-1/4 h-32 bg-transparent xl:bg-white left-0 bottom-0 z-10 opacity-70">
+      <div class="clip-triangle absolute w-full xl:w-1/4 h-32 bg-transparent xl:bg-white left-0 bottom-0 z-10">
         <button type="button">
           <ChevronLeftIcon class="chevron-left-icon h-16 w-16 absolute left-0 md:left-7 bottom-0 text-gray-500 hover:text-gray-700 active:text-gray-900"></ChevronLeftIcon>
         </button>
@@ -129,7 +129,7 @@ body {
 }
 
 .clip-triangle {
-  clip-path: polygon(0% 0%,0% 100%,100% 100%);
+  clip-path: polygon(0% 30%,0% 100%,100% 100%);
 }
 
 .swiper-pagination {

@@ -1,6 +1,6 @@
 <template>
   <section id="latest-panel" class="mb-24 lg:mb-48">
-    <div class=" flex justify-center mr-20">
+    <div class=" flex justify-center mr-20 flex-wrap">
       <div class=" mr-12">
         <img src="/src/assets/images/latestTitle.webp" alt="">
         <div class="latest-decoration-ani text-center mt-5 text-xl">
@@ -12,13 +12,13 @@
       <a href="#" class="mr-6 group" v-for="item in data" :key="item.url">
         <p class=" mb-1">{{ item.time }}</p>
         <div class="w-72 h-60 mb-1 relative overflow-hidden">
-          <div class="duration-500 ease-in opacity-0 bg-black group-hover:opacity-50 w-full h-full absolute z-10"></div>
+          <div class="duration-300 ease-in opacity-0 bg-black group-hover:opacity-50 w-full h-full absolute z-10"></div>
             <!-- :style="{ 'background-image': 'url('+ item.url +')' }" -->
           <div :class="item.img"
             class="duration-3000 ease-in bg-no-repeat bg-center bg-cover w-full h-full absolute transform  group-hover:rotate-6 group-hover:scale-110"></div>
           </div>
         <h3 class=" text-xl mb-2">{{ item.title }}</h3>
-        <h4 class="ease-in duration-500 group-hover:ml-3 text-sm">READ<i class="fas fa-long-arrow-alt-right ml-2"></i></h4>
+        <h4 class="ease-in duration-300 group-hover:ml-3 text-sm">READ<i class="fas fa-long-arrow-alt-right ml-2"></i></h4>
       </a>
     </div>
   </section>

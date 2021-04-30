@@ -12,6 +12,19 @@ export const addToCart = (data) => {
   return req('post', 'api/livejs/v1/customer/yunlew531/carts', data);
 };
 
+export const removeCart = (id) => {
+  return req('delete', `api/livejs/v1/customer/yunlew531/carts/${id}`);
+};
+
+export const removeAllCarts = () => {
+  return req('delete', 'api/livejs/v1/customer/yunlew531/carts');
+};
+
+export const axiosQuantity = (data) => {
+  return req('patch', 'api/livejs/v1/customer/yunlew531/carts', data);
+};
+
+
 // export const userLogIn = (logInData) => {
 //   return req('post', '/user/log-in', logInData)
 // }

@@ -5,8 +5,8 @@
   <ProductAbout></ProductAbout>
   <ProductInfo></ProductInfo>
   <ProductSale></ProductSale>
-  <ProductList :cartData="cartData"></ProductList>
-  <CartPanel @emitCartData="emitCartData"></CartPanel>
+  <ProductList :cartData="cartData" @updateCartData="(data) => cartData = data"></ProductList>
+  <CartPanel :cartData="cartData" @emitCartData="emitCartData"></CartPanel>
   <FormPanel></FormPanel>
   <Footer></Footer>
 </template>
@@ -37,12 +37,14 @@ export default {
     FormPanel,
     Footer,
   },
-
+  props: {
+    cartData: Object,
+  },
   setup() {
     const cartData = reactive({ cartArr: [], });
 
     function emitCartData(arr) {
-      cartData.cartArr = arr.cartArr;
+      cartData.cartArr = arr;
     }
 
     return {

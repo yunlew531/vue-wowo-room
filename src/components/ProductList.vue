@@ -32,9 +32,15 @@
           </div>
           <div class=" flex justify-between items-center p-1 text-lg">
             <div>
-              <button type="button" class=" text-gray-500 hover:text-gray-800 active:text-black"><i class="fas fa-minus"></i></button>
-              <span class=" mx-3">0</span>
-              <button type="button" class=" text-gray-500 hover:text-gray-800 active:text-black"><i class="fas fa-plus"></i></button>
+              <button @click="item.quantity = item.quantity < 2 ? item.quantity : item.quantity - 1" type="button"
+                class=" text-gray-500 hover:text-gray-800 active:text-black">
+                <i class="fas fa-minus"></i>
+              </button>
+              <span class=" mx-3">{{ item.quantity }}</span>
+              <button @click="item.quantity += 1" type="button" 
+                class=" text-gray-500 hover:text-gray-800 active:text-black">
+                <i class="fas fa-plus"></i>
+              </button>
             </div>
             <button type="button" @click="handAddToCart(item)"
               class=" duration-200 bg-gray-900 text-white px-3 py-1 rounded-md border hover:border-gray-900 hover:bg-gray-200 hover:text-gray-900">
@@ -48,19 +54,20 @@
 </template>
 
 <script>
-import { onMounted, reactive, ref } from 'vue';
+import { onMounted, reactive, ref, watch } from 'vue';
 import { getProducts, addToCart } from '/@/user.js';
 
 export default {
   props: {
     cartData: Object,
   },
-  setup(props) {
+  setup(props, { emit }) {
     const productsData = reactive({ productsArr: [], });
     const categoryArr = reactive([]);
     const renderProductArr = reactive({ renderProductArr: [], });
     const categorySeclect = ref('');
     const searchProductText = ref('');
+    const cartData = props.cartData;
 
     function handCategory(arr) {
       arr.forEach(item => {
@@ -81,13 +88,13 @@ export default {
     }
 
     function handAddToCart(item) {
-      const arr = props.cartData.cartArr;
-      let quantity = 1;
-      arr.forEach(product => {
+      let quantity = item.quantity || 1;
+      cartData.cartArr.forEach(product => {
         if (product.product.id === item.id) {
-          quantity = product.quantity + 1;
+          quantity = product.quantity + item.quantity;
         }
       });
+      item.quantity = 1;
       const data = {
         "data": {
           "productId": item.id,
@@ -96,20 +103,23 @@ export default {
       };
       addToCart(data)
       .then(res => {
-        console.log(res);
-        props.cartData.cartArr = res.data.carts;
-        console.log(arr);
+        cartData.cartArr = res.data.carts;
       })
       .catch(err => {
         console.log(err);
       });
     }
 
+    watch(cartData.cartArr, ()=>{
+      emit('updateCartData', cartData);
+    },{ deep: true });
+
     onMounted(() => {
       getProducts()
       .then(res => {
         productsData.productsArr = res.data.products;
         renderProductArr.renderProductArr = [ ...productsData.productsArr ];
+        renderProductArr.renderProductArr.forEach(item => item.quantity = 1);
         handCategory(productsData.productsArr);
         })
       .catch(err => {

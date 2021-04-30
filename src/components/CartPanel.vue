@@ -26,7 +26,7 @@
           </td>
           <td>
               <div class="relative flex flex-row w-20 h-8">
-              <input type="number" :value="item.quantity"
+              <input type="number" :value="item.quantity" @change="handAxiosQuantity(item)"
                 class="w-full font-semibold text-center text-gray-700 bg-gray-200 outline-none focus:outline-none hover:text-black focus:text-black" />
             </div>
           </td>
@@ -41,32 +41,76 @@
             </span>
           </td>
           <td class=" text-right">
-            <button class=" rounded text-white py-1 px-3 bg-red-500 hover:bg-red-600 active:bg-red-700" type="button">刪除</button>
+            <button @click="handRemoveCart(item)"
+              class=" rounded text-white py-1 px-3 bg-red-500 hover:bg-red-600 active:bg-red-700" type="button">
+              刪除
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
     <div class=" flex justify-between text-base mt-4">
-      <button class=" rounded text-white py-1 px-3 bg-red-500 hover:bg-red-600 active:bg-red-700" type="button">清空購物車</button>
+      <button @click="handRemoveAllCarts"
+        class=" rounded text-white py-1 px-3 bg-red-500 hover:bg-red-600 active:bg-red-700" type="button">清空購物車
+      </button>
       <p>總金額: ${{ caculateTotalCartPrice.toLocaleString() }}</p>
     </div>
   </section>
 </template>
 
 <script>
-import { reactive, onMounted, computed } from 'vue';
-import { getCarts } from '/@/user.js';
+import { onMounted, computed } from 'vue';
+import { getCarts, removeAllCarts, removeCart, axiosQuantity } from '/@/user.js';
 
 export default {
+  props: {
+    cartData: Object,
+  },
   emits: {
     emitCartData: (obj) => typeof obj === 'object',
   },
   setup(props, { emit }) {
-    const cartData = reactive({ cartArr: [], });
+    const cartData = props.cartData;
+
+    function handRemoveCart(item) {
+      removeCart(item.id).then(res => {
+        emit('emitCartData', res.data.carts);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    }
+    
+    function handRemoveAllCarts() {
+      removeAllCarts()
+      .then(res => {
+        emit('emitCartData', res.data.carts);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    }
+
+    function handAxiosQuantity(item) {
+      item.quantity = parseInt(event.target.value);
+      const data = {
+        data: {
+          id: item.id,
+          quantity: item.quantity,
+        }
+      };
+      axiosQuantity(data)
+      .then(res => {
+        emit('emitCartData', res.data.carts);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    }
 
     const caculateTotalCartPrice = computed(() => {
       let total = 0;
-      if (cartData.cartArr.length !== 0) {
+      if (cartData.length !== 0) {
         total = cartData.cartArr.reduce((prev, item) => {
           const eachTotal = item.product.price * item.quantity;
           return prev + eachTotal;
@@ -80,8 +124,7 @@ export default {
     onMounted(() => {
       getCarts()
       .then(res=> {
-        cartData.cartArr = res.data.carts;
-        emit('emitCartData', cartData);
+        emit('emitCartData', res.data.carts);
       })
       .catch(err => {
         console.log(err);
@@ -91,6 +134,9 @@ export default {
     return {
       cartData,
       caculateTotalCartPrice,
+      handRemoveAllCarts,
+      handRemoveCart,
+      handAxiosQuantity,
     };
   },
 }

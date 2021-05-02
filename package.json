@@ -9,8 +9,11 @@
   "dependencies": {
     "@heroicons/vue": "^1.0.1",
     "@tailwindcss/forms": "^0.3.2",
+    "@vee-validate/i18n": "^4.1.20",
+    "@vee-validate/rules": "^4.1.20",
     "axios": "^0.21.1",
     "mitt": "^2.1.0",
+    "vee-validate": "^4.3.5",
     "vue": "^3.0.5",
     "vue-axios": "^3.2.4"
   },

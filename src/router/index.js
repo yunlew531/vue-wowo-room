@@ -12,9 +12,14 @@ const routes = [
     component: () => import("/@/components/views/BackEnd.vue"),
     children: [
       {
-        path: "orderTable",
+        path: "OrderTable",
         name: "OrderTable",
         component: () => import("/@/components/orderTable.vue"),
+      },
+      {
+        path: "categoryRevenueProportion",
+        name: "CategoryRevenueProportion",
+        component: () => import("/@/components/CategoryRevenueProportion.vue"),
       }
     ],
   },

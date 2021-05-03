@@ -18,12 +18,14 @@
 import BackEndHeader from '/@/components/BackEndHeader.vue';
 import SideBar from '/@/components/SideBar.vue';
 import OrderTable from '/@/components/OrderTable.vue';
+import CategoryRevenueProportion from '/@/components/CategoryRevenueProportion.vue';
 
 export default {
   components: {
     BackEndHeader,
     SideBar,
     OrderTable,
+    CategoryRevenueProportion,
   }
 }
 </script>

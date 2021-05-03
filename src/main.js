@@ -11,6 +11,7 @@ import App from './App.vue';
 import './main.css';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import Router from "/@/router";
 import './api.js';
 
 defineRule('required', required);
@@ -23,7 +24,8 @@ configure({
 setLocale('zh_TW');
 
 const app = createApp(App);
-app.use(VueAxios, axios)
+app.use(Router);
+app.use(VueAxios, axios);
 app.component('Form', Form);
 app.component('Field', Field);
 app.component('ErrorMessage', ErrorMessage);

@@ -28,6 +28,21 @@ export const submitOrder = (data) => {
   return req('post', 'api/livejs/v1/customer/yunlew531/orders', data);
 };
 
+export const getOrders = () => {
+  return req('get', 'api/livejs/v1/admin/yunlew531/orders');
+};
+
+export const editOrderStatus = (data) => {
+  return req('put', 'api/livejs/v1/admin/yunlew531/orders', data);
+};
+
+export const deleteAllOrders = () => {
+  return req('delete', 'api/livejs/v1/admin/yunlew531/orders');
+};
+
+export const deleteAOrder = (id) => {
+  return req('delete', `api/livejs/v1/admin/yunlew531/orders/${id}`);
+};
 
 // export const userLogIn = (logInData) => {
 //   return req('post', '/user/log-in', logInData)

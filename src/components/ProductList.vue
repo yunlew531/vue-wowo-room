@@ -1,5 +1,5 @@
 <template>
-  <section class="product-list bg-gray-100 py-20">
+  <section id="product-list" class="product-list bg-gray-100 py-20">
     <div class=" max-w-screen-lg m-auto">
       <h2 class=" text-3xl text-center mb-8 font-bold text-shadow">WOWOROOM</h2>
       <div class=" flex justify-between items-center mb-16 text-base">

@@ -1,14 +1,12 @@
 <template>
   <header id="header">
-    <div class=" ml-10 my-8 lg:mx-12 lg:my-10 flex justify-between text-gray-800">
+    <div class=" ml-10 my-8 lg:mx-12 flex justify-between text-gray-800">
       <h1 class=" text-3xl font-bold">
         <router-link :to="{ name: 'Customer' }">WOWOROOM</router-link>
       </h1>
       <ul class=" inline-flex max-w-xl text-base">
-        <li class=" mx-6 font-bold relative btn-ani btn-ani-gray"><a href="#product-about">本店優勢</a></li>
-        <li class=" mx-6 font-bold text-purple-600 relative btn-ani btn-ani-purple"><a href="#product-list">立即預定</a></li>
-        <li class=" mx-6 font-bold relative btn-ani btn-ani-gray">
-          <router-link :to="{ name: 'BackEnd' }">後臺系統</router-link>
+        <li class=" mx-6 font-bold relative btn-ani btn-ani-gray flex items-center">
+          <router-link :to="{ name: 'Customer' }">返回商品頁</router-link>
         </li>
       </ul>
     </div>

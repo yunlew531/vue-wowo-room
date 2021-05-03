@@ -2,7 +2,7 @@ import axios from "axios";
 
 const instance = axios.create({
   baseURL: 'https://hexschoollivejs.herokuapp.com/',
-  headers: { 'Content-Type': 'application/json' },
+  headers: { 'Content-Type': 'application/json', 'Authorization': 'uknI6iL82gW94Y0iYoS5couTy4f1' },
   timeout: 20000,
 });
 

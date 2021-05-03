@@ -8,7 +8,7 @@
         <li class=" mx-6 font-bold relative btn-ani btn-ani-gray"><a href="#product-about">本店優勢</a></li>
         <li class=" mx-6 font-bold text-purple-600 relative btn-ani btn-ani-purple"><a href="#product-list">立即預定</a></li>
         <li class=" mx-6 font-bold relative btn-ani btn-ani-gray">
-          <router-link :to="{ name: 'BackEnd' }">後臺系統</router-link>
+          <router-link :to="{ name: 'OrderTable' }">後臺系統</router-link>
         </li>
       </ul>
     </div>

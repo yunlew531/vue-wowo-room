@@ -1,5 +1,5 @@
 <template>
-  <!-- <link href="/path/to/c3.css" rel="stylesheet"> -->
+  <link href="/path/to/c3.css" rel="stylesheet">
 
   <section id="categor-revenu-proportion">1</section>
   <!-- <script src="/path/to/d3.v5.min.js" charset="utf-8"></script>

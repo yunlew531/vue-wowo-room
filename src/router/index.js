@@ -8,7 +8,6 @@ const routes = [
   },
   {
     path: "/backEnd",
-    name: "BackEnd",
     component: () => import("/@/components/views/BackEnd.vue"),
     children: [
       {
@@ -26,6 +25,7 @@ const routes = [
 ];
 
 export default createRouter({
-  history: createWebHistory(),
+  history: createWebHistory("/vue-wowo-room/"),
   routes,
+  linkActiveClass: "translate-x-2"
 });
